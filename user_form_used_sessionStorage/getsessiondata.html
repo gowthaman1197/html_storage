@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get Session Data</title>
+</head>
+<body>
+	<div id="name"></div>
+	<br>
+	<div id="age"></div>
+	<br>
+	<div id="email"></div>
+	<script type="text/javascript">
+		if (sessionStorage.name && sessionStorage.age && sessionStorage.email) {
+			document.getElementById('name').innerHTML = sessionStorage.name;
+			document.getElementById('age').innerHTML = sessionStorage.age;
+			document.getElementById('email').innerHTML = sessionStorage.email;
+		}else{
+			document.getElementById('name').innerHTML = "Please fill all the details.";
+		}
+	</script>
+</body>
+</html>

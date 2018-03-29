@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How to store data in local</title>
+</head>
+<body onload="storedvalue()">
+	<form>
+		<input type="text" name="user_name" id="user_id" value="">
+		<input type="submit" onclick="userData()" value="Save">
+		<span id="result"></span>
+	</form>
+	<script type="text/javascript">
+		function userData(){
+			localStorage.user_name = document.getElementById('user_id').value;
+		}
+		function storedvalue(){
+			if (localStorage.user_name) {
+				document.getElementById("result").innerHTML = localStorage.user_name;
+			}
+		}
+	</script>
+</body>
+</html>

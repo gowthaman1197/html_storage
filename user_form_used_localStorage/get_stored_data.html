@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stored Data</title>
+</head>
+<body>
+	<div id="name"></div>
+	<br>
+	<div id="age"></div>
+	<br>
+	<div id="email"></div>
+	<script type="text/javascript">
+		if (localStorage.first_name && localStorage.age && localStorage.email) {
+			document.getElementById('name').innerHTML = localStorage.first_name;
+			document.getElementById('age').innerHTML = localStorage.age;
+			document.getElementById('email').innerHTML = localStorage.email;
+		}else{
+			document.getElementById('name').innerHTML = "Please enter all the field.";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User form session storage</title>
+	<style type="text/css">
+		a{
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<form method="post" action="#">
+		<p><input type="text" name="name" id="name" placeholder="name"></p>
+		<p><input type="text" name="age" id="age" placeholder="age"></p>
+		<p><input type="text" name="email" id="email" placeholder="email"></p>
+		<p><button onclick="saveData()"><a href="getsessiondata.html">Save</a></button></p>
+	</form>
+
+	<script type="text/javascript">
+		function saveData(){
+			sessionStorage.name = document.getElementById('name').value;
+			sessionStorage.age = document.getElementById('age').value;
+			sessionStorage.email = document.getElementById('email').value;
+		}
+	</script>
+</body>
+</html>

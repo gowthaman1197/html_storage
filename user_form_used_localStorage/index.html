@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User form</title>
+</head>
+<body>
+	<form method="post" action="">
+		<p><input type="text" name="first_name" id="firstname" placeholder="Name"></p>
+		<p><input type="number" name="age" id="age" placeholder="Age"></p>
+		<p><input type="email" name="email" id="email" placeholder="Email"></p>
+		<p><button onclick="userSave()"><a href="get_stored_data.html">Save</a></button></p>		
+	</form>
+	<script type="text/javascript">
+		function userSave(){
+			localStorage.first_name = document.getElementById('firstname').value;
+			localStorage.age = document.getElementById("age").value;
+			localStorage.email = document.getElementById("email").value;
+		}
+	</script>
+	<style type="text/css">
+		a{
+			text-decoration: none;
+		}
+	</style>
+</body>
+</html>
